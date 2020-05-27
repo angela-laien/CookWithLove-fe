@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import { useHistory } from 'react-router';
 import * as yup from 'yup';
+import styled from "styled-components";
+import { useToasts } from "react-toast-notifications";
+
+const companyLogo = require('../Instacook.png');
 
 const formOutline = yup.object().shape({
     username: yup.string().required('* please enter username'),
@@ -10,7 +14,8 @@ const formOutline = yup.object().shape({
 
 export default function LoginForm(props) {
     const history = useHistory();
-
+    const { addToast } = useToasts();
+  
     const [formState, setFormState] = useState({
         username: '',
         password: ''
@@ -29,6 +34,16 @@ export default function LoginForm(props) {
                 setDisableSubmit(!valid);
             });
         }, [formState]);
+
+        useEffect(() => {
+            if(props.toast === true) {
+                addToast("You are logged in!", {
+                    appearence: "success",
+                    autoDismiss: true,
+                })
+                props.setToast(false);
+            }
+        }, [props.toast]);
 
     const validateChange = (e) => {
         yup
@@ -67,6 +82,10 @@ export default function LoginForm(props) {
             })
             .catch((err) => {
                 console.log(err.res);
+                addToast("invalid login", {
+                    appearance: "error",
+                    autoDismiss: true,
+                });
             });
     };
 
@@ -84,9 +103,16 @@ export default function LoginForm(props) {
     };
 
     return (
-        <div>
-            <form className='form' onSubmit={formSubmit}>
-                <input 
+        <FormContainer>
+            <Form onSubmit={formSubmit}>
+                <Logo>
+                    <Img 
+                        src={companyLogo}
+                        className='companylogo'
+                        alt='companylogo'
+                    />
+                </Logo>
+                <Input 
                     className='form'
                     id='username'
                     type='text'
@@ -99,7 +125,7 @@ export default function LoginForm(props) {
                     (<p className='error'>{error.username}</p>)
                 : null}
 
-                <input 
+                <Input 
                     className='form'
                     id='password'
                     type='password'
@@ -112,8 +138,65 @@ export default function LoginForm(props) {
                     (<p className='error'>{error.password}</p>)
                 : null}
 
-                <button className='button' disabled={disableSubmit}>Login</button>
-            </form>
-        </div>
+                <Button disabled={disableSubmit}>Login</Button>
+            </Form>
+        </FormContainer>
     );
 }
+
+const FormContainer = styled.div`
+    width: 75%;
+    margin: 0 auto;
+`;
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 3em 3em 5em;
+    max-with: 400px;
+    margin: 11vh auto;
+    box-shadow: 0 0 1em green;
+    border-radius: 2px;
+        .reg-link {
+            margin-top: 2rem;
+            a {
+                color: #3a7669;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+`;
+
+const Logo = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+const Img = styled.img`
+    width: 80%;
+    max-width: 400px;
+`;
+
+ const Input = styled.input`
+    display: block;
+    box-sizing: border-box;
+    width: 60%;
+    max-width: 300px;
+    outline: none;
+    margin: 0rem 0rem 1rem 0rem;
+ `;
+
+ const Button = styled.button`
+    border-radius: 7px;
+    font-size: 1rem;
+    margin-top: 30px;
+    padding: 0.6em 1.1em;
+    background: hotpink;
+    color: white;
+    cursor: pointer;
+    :hover {
+        background: #6dc0ae;
+    }
+ `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
@@ -9,9 +9,10 @@ import UserPage from './components/UserPage';
 import AddRecipe from './components/AddRecipe';
 import Nav from './components/Nav';
 import UserNav from './components/UserNav';
-
+import { ToastProvider } from "react-toast-notifications";
 
 function App() {
+  const [toast, setToast] = useState(false);
   return (
       <Router>
         <div>
@@ -21,11 +22,15 @@ function App() {
           </Route>
           <Route exact path='/login'>
             <Nav />
-            <LoginForm />
+            <ToastProvider>
+              <LoginForm toast={toast} setToast={setToast}/>
+            </ToastProvider>
           </Route>
           <Route exact path='/register'>
             <Nav />
-            <RegisterForm />
+            <ToastProvider>
+              <RegisterForm setToast={setToast} />
+            </ToastProvider>
           </Route>
           <Switch>
             <PrivateRoute exact path='/user_page'>
