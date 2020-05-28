@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fugaz+One&family=Lobster&display=swap");
+
+.all-container {
+
+  text-align: center;
+  background-color: rgb(255,170,200);
+  padding-top: 2rem;
+
+  .all-title {
+    font-family: "Fugaz One";
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(255,20,147);
+    padding: 0% 5%;
+  }
+  
+  .allRecipes {
+    display: flex;
+    flex-direction: column;
+
+    .recipeImg {
+      width: 80%;
+      margin-bottom: 1%;
+      max-width: 50rem; 
+      box-shadow: 13px 10px 33px -20px rgba(0, 0, 0, 0.75);
+    }
+
+    h2 {
+        font-family: "Lobster";
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-top: 5%;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    p {
+        margin: 1% 8%;
+        font-family: "Courgette";
+        font-weight: 800;
+        font-size: 1rem;
+        color: rgb(230,20,50);
+    }
+
+  }
+
+
+
+}

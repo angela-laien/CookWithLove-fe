@@ -16,15 +16,15 @@ const AllRecipes = () => {
     }, []);
 
     return (
-        <div className="everything">
+        <div className="all-container">
             <div data-aos="fade-in" data-aos-offset="200" data-aos-duration="1500">
-                <h1 className="big-title">Welcome to Angela's 30 minutes Recipes</h1>
+                <h1 className="all-title">Welcome to Angela's 30 minutes Recipes</h1>
                 {recipes.map((recipe) => (
                     <div className='allRecipes' key={recipe.user_id}>
-                        <h2 className="title">{recipe.recipeName}</h2>
+                        <h2 className="recipeTitle">{recipe.recipeName}</h2>
                         <Link to={`/recipes/${recipe.id}`}>
                             <img 
-                                className='img'
+                                className='recipeImg'
                                 src={recipe.imageURL}
                                 alt='recipe'
                             />

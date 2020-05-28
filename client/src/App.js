@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import RegisterForm from './components/RegisterForm';
@@ -34,8 +34,10 @@ function App() {
           </Route>
           <Switch>
             <PrivateRoute exact path='/user_page'>
-              <UserNav />
-              <UserPage />
+              <ToastProvider>
+                <UserNav />
+                <UserPage />
+              </ToastProvider>
             </PrivateRoute>
             <PrivateRoute exact path='/add_recipe'>
               <UserNav />
