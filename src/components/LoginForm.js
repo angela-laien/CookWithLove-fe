@@ -172,11 +172,11 @@ const Form = styled.form`
 const Logo = styled.div`
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 100%;
 `;
 
 const Img = styled.img`
-    width: 100%;
+    width: 100px;
 `;
 
 const Input = styled.input`
