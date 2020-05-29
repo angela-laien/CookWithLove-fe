@@ -149,7 +149,7 @@ const Form = styled.form`
     flex-direction: column;
     align-items: center;
     background: #fff;
-    padding: 3em 3em 5em;
+    padding: 5%;
     max-with: 400px;
     margin: 11vh auto;
     box-shadow: 0 0 1em green;
@@ -170,23 +170,23 @@ const Logo = styled.div`
 `;
 
 const Img = styled.img`
-    width: 100px;
+    width: 30%;
 `;
 
- const Input = styled.input`
+const Input = styled.input`
     display: block;
     box-sizing: border-box;
     width: 200px;
     outline: none;
     margin: 0rem 0rem 1rem 0rem;
- `;
+`;
 
- const Button = styled.button`
+const Button = styled.button`
     border-radius: 7px;
     font-family: "Courgette";
     font-size: 1rem;
     font-weight: 800;
-    margin-top: 30px;
+    margin: 4% 0%;
     padding: 0.6em 1.1em;
     background: hotpink;
     color: white;
@@ -194,4 +194,4 @@ const Img = styled.img`
     :hover {
         background: rgb(60,199,113);
     }
- `;
+`;
