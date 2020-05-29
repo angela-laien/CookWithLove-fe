@@ -170,15 +170,13 @@ const Logo = styled.div`
 `;
 
 const Img = styled.img`
-    width: 80%;
-    max-width: 400px;
+    width: 100px;
 `;
 
  const Input = styled.input`
     display: block;
     box-sizing: border-box;
-    width: 60%;
-    max-width: 300px;
+    width: 200px;
     outline: none;
     margin: 0rem 0rem 1rem 0rem;
  `;
