@@ -175,7 +175,7 @@ const Logo = styled.div`
 `;
 
 const Img = styled.img`
-    width: 80%;
+    width: 50%;
     max-width: 400px;
 `;
 
