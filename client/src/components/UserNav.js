@@ -19,13 +19,13 @@ function UserNav() {
                         alt='companylogo'
                     />
                 </Link>
-                <Link to='/add_recipe' style={{ textDecoration: 'none' }}>
+                <Link className='navText' to='/add_recipe' style={{ textDecoration: 'none' }}>
                     <A>Add Recipe</A>
                 </Link>
-                <Link to='/user_page' style={{ textDecoration: 'none' }}>
+                <Link className='navText' to='/user_page' style={{ textDecoration: 'none' }}>
                     <A>My Recipes</A>
                 </Link>
-                <Link onClick={logout} to='/' style={{ textDecoration: 'none' }}>
+                <Link className='navText' onClick={logout} to='/' style={{ textDecoration: 'none' }}>
                     <A>Logout</A>
                 </Link>
             </Navigation>
@@ -44,12 +44,15 @@ const Navigation = styled.nav`
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    background-color: #3cb371;
+    background-color: rgb(255,135,180);
     align-items: center;
 `;
 
 const A = styled.a`
     color: white;
+    &:hover {
+        color: rgb(255,20,147);
+      }
     font-weight: bold;
 `;
 

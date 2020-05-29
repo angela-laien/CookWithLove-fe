@@ -185,13 +185,15 @@ const Img = styled.img`
 
  const Button = styled.button`
     border-radius: 7px;
+    font-family: "Courgette";
     font-size: 1rem;
+    font-weight: 800;
     margin-top: 30px;
     padding: 0.6em 1.1em;
     background: hotpink;
     color: white;
     cursor: pointer;
     :hover {
-        background: #6dc0ae;
+        background: rgb(60,199,113);
     }
  `;

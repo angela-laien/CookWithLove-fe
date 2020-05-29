@@ -29,23 +29,22 @@ function App() {
           <Route exact path='/register'>
             <Nav />
             <ToastProvider>
-              <RegisterForm setToast={setToast} />
+              <RegisterForm toast={toast} setToast={setToast} />
             </ToastProvider>
           </Route>
           <Switch>
             <PrivateRoute exact path='/user_page'>
               <ToastProvider>
                 <UserNav />
-                <UserPage />
+                <UserPage toast={toast} setToast={setToast}/>
               </ToastProvider>
             </PrivateRoute>
             <PrivateRoute exact path='/add_recipe'>
               <UserNav />
-              <AddRecipe />
+              <ToastProvider>
+                <AddRecipe toast={toast} setToast={setToast}/>
+              </ToastProvider>
             </PrivateRoute>
-            {/* <PrivateRoute exact path='/user_recipe/:id'>
-              <UserNav />
-            </PrivateRoute> */}
           </Switch>
         </div>
       </Router>

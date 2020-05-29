@@ -18,7 +18,7 @@ const AllRecipes = () => {
     return (
         <div className="all-container">
             <div data-aos="fade-in" data-aos-offset="200" data-aos-duration="1500">
-                <h1 className="all-title">Welcome to Angela's 30 minutes Recipes</h1>
+                <h1 className="all-title">Welcome to the 30 Minutes Recipes</h1>
                 {recipes.map((recipe) => (
                     <div className='allRecipes' key={recipe.user_id}>
                         <h2 className="recipeTitle">{recipe.recipeName}</h2>

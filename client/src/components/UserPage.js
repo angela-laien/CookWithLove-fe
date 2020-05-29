@@ -108,8 +108,9 @@ const UserPage = (props) => {
     };
 
     return (
-       <div data-aos="fade-in" data-aos-offset="200" data-aos-duration="1500">
+       <div className='userContainer' data-aos="fade-in" data-aos-offset="200" data-aos-duration="1500">
            <h1 className='user-title'>My Recipes</h1>
+           <h2 className='note'>Create an account to save and share your recipes :)</h2>
             <div className='list'>
                 {recipes.map((recipe) => (
                     <div className='container'>
@@ -118,7 +119,7 @@ const UserPage = (props) => {
                                 <Link to={`/user_pages/${recipe.id}`}>
                                     {recipe.imageURL ? (
                                         <img 
-                                        className='img'
+                                        className='userRecipeImg'
                                         src={recipe.imageURL}
                                         alt='recipe'
                                         />
@@ -144,14 +145,14 @@ const UserPage = (props) => {
                                             openModal(recipe.recipeName)
                                         }}
                                     >
-                                        Edit
+                                        <a className='btnText'>Edit</a>
                                     </div>
                                     
                                     <div
                                         className='delete'
                                         onClick={(e) => deleteRecipe(e, recipe.id)}
                                     >
-                                        Delete
+                                        <a className='btnText'>Delete</a>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +168,7 @@ const UserPage = (props) => {
                                         Edit {recipe.recipeName}
                                     </h2>
                                     <button onClick={closeModal}>
-                                        <i className='fas fa-times'></i>
+                                        <i className='fas fa-times'>close</i>
                                     </button>
                                 </div>
                                 <div className='updateInput'>
@@ -247,6 +248,11 @@ const UserPage = (props) => {
 
 const customStyle = {
     content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
       backgroundColor: "pink",
       borderRadius: "8px",
     },

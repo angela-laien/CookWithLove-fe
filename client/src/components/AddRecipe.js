@@ -1,7 +1,9 @@
 import axiosWithAuth from '../utils/axiosWithAuth';
 import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { useToasts } from "react-toast-notifications";
+import styled from "styled-components";
 
 const formOutline = yup.object().shape({
     recipeName: yup
@@ -31,7 +33,8 @@ const formOutline = yup.object().shape({
 });
 
 export default function AddRecipe(props) {
-    const { push } = useHistory();
+    // const { push } = useHistory();
+    const { addToast } = useToasts();
     
     const [formState, setFormState] = useState({
         user_id: parseInt(localStorage.getItem('user_id')),
@@ -111,6 +114,10 @@ export default function AddRecipe(props) {
             })
             .catch((err) => {
                 console.log(err.res);
+                addToast("something unexpected happened, please try again", {
+                    appearance: "error",
+                    autoDismiss: true,
+                  });
             });
     };
 
@@ -128,10 +135,10 @@ export default function AddRecipe(props) {
     };
 
     return (
-        <div>
-            <form className='form' onSubmit={formSubmit}>
-                <h3>Add a Recipe</h3>
-                <input 
+        <Add>
+            <Form onSubmit={formSubmit}>
+                <H3>Add a Recipe</H3>
+                <Input 
                     className="form_input"
                     id="recipeName"
                     type="text"
@@ -144,7 +151,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.recipeName}</p>
                 ) : null}
 
-                <input 
+                <Input 
                     className="form_input"
                     id="prepTime"
                     type="text"
@@ -157,7 +164,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.prepTime}</p>
                 ) : null}
 
-                <input 
+                <Input 
                     className="form_input"
                     id="cookTime"
                     type="text"
@@ -170,7 +177,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.cookTime}</p>
                 ) : null}
 
-                <input 
+                <Input 
                     className="form_input"
                     id="yields"
                     type="text"
@@ -183,7 +190,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.yields}</p>
                 ) : null}
 
-                <input 
+                <Input 
                     className="form_input"
                     id="ingredients"
                     type="text"
@@ -196,7 +203,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.ingredients}</p>
                 ) : null}
 
-                <input 
+                <Input 
                     className="form_input"
                     id="instructions"
                     type="text"
@@ -209,16 +216,66 @@ export default function AddRecipe(props) {
                     <p className="error">{error.instructions}</p>
                 ) : null}
 
-                <input 
+                <Input 
                     className='upload'
                     type='file'
                     id='customfile'
                     onChange={onFileChange}
                 />
-                <button className='button' onClick={formSubmit}>
+                <Button onClick={formSubmit}>
                     Next
-                </button>
-            </form>
-        </div>
+                </Button>
+            </Form>
+        </Add>
     );
 }
+
+const Add = styled.div`
+    width: 80%;
+    margin: 0 auto;
+`;
+
+const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(152,231,152);
+    padding: 4em 4em 6em;
+    max-width: 400px;
+    margin: 10vh auto;
+    box-shadow: 5px 8px 32px 10px rgba(150, 148, 150, 1);
+    border-radius: 10px;
+`;
+
+ const H3 = styled.h3`
+    font-family: "Fugaz One";
+    margin: 0 0 50px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0,100,0);
+ `;
+
+ const Input = styled.input`
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    margin: 0;
+    margin-bottom: 0.5rem;
+ `;
+
+ const Button = styled.button`
+    width: 45%;
+    border-radius: 7px;
+    font-family: "Lobster";
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: 30px;
+    padding: 0.8em 0.5em;
+    background: rgb(34,139,34);
+    color: white;
+    cursor: pointer;
+    :hover {
+    background: rgb(0,100,0);
+ `;

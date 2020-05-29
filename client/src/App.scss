@@ -1,10 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fugaz+One&family=Lobster&display=swap");
 
+.navText {
+  font-family: "Courgette";
+}
+
+.btnText {
+  font-family: "Fugaz One";
+}
+
+// AllRecipes
 .all-container {
 
   text-align: center;
   background-color: rgb(255,170,200);
-  padding-top: 2rem;
+  padding: 2rem 0rem;
 
   .all-title {
     font-family: "Fugaz One";
@@ -13,6 +22,7 @@
     font-weight: 500;
     color: rgb(255,20,147);
     padding: 0% 5%;
+    margin: -0.2% 0% -3.2% 0%;
   }
   
   .allRecipes {
@@ -39,12 +49,176 @@
         margin: 1% 8%;
         font-family: "Courgette";
         font-weight: 800;
-        font-size: 1rem;
-        color: rgb(230,20,50);
+        font-size: 1.1rem;
+        color: white
     }
 
   }
 
+}
 
+// UserPage
+.userContainer {
 
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+
+  .user-title {
+    font-family: "Fugaz One";
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(255,105,180);
+    padding: 0% 5%;
+    margin: -0.5% 0% -2.5% 0%;
+  }
+
+  .note {
+    font-family: "Lobster";
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(220,20,60);
+    padding: 0% 5%;
+    margin: 4% 0% -2.5% 0%;
+  }
+
+  .list {
+
+    .userRecipeImg {
+      width: 80%;
+      margin-bottom: 1%;
+      max-width: 50rem; 
+      box-shadow: 13px 10px 33px -20px rgba(0, 0, 0, 0.75);
+    }
+
+    h2 {
+      font-family: "Lobster";
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-top: 5%;
+      margin-bottom: 1rem;
+      color: rgb(34,139,34);
+  }
+
+    p {
+        margin: 1% 8%;
+        font-family: "Courgette";
+        font-weight: 800;
+        font-size: 1.1rem;
+        color: rgb(34,139,34);
+    }
+
+    .buttonContainer {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 1rem;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        color: white;
+        background:rgb(255,105,180);
+        padding: 0.3rem 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+          background: rgb(255,20,147);
+          color: white;
+        }
+      }
+        
+    }
+
+  }
+}
+
+// Modal
+.ReactModalPortal {
+  h2 {
+    margin: 0 0 2rem 0;
+  }
+
+  .ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background-color: rgba(255, 255, 255, 0.37);
+  }
+  .ReactModal__Content {
+    .modalHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        background: none;
+        height: 1.5rem;
+        width: 18%;
+        background-color: hotpink;
+        border: none;
+        margin-bottom: 1.8rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          background: rgb(255,20,147);
+        }
+        i {
+          font-size: 0.8rem;
+          color: white;
+        }
+      }
+    }
+    .updateInput {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label {
+          margin-bottom: 0.3rem;
+          align-self: flex-start;
+          margin-left: 1.5rem;
+          font-weight: 700;
+        }
+        .text-area {
+          width: 80%;
+          margin-bottom: 2rem;
+          border-radius: 2px;
+        }
+        .button {
+          width: 35%;
+          height: 1.8rem;
+          font-size: 0.8rem;
+          color: white;
+          border-radius: 8px;
+          cursor: pointer;
+          background-color: hotpink;
+          &:hover {
+            background: rgb(255,20,147);
+          }
+          border: none;
+        }
+        input {
+          border-radius: 3px;
+          margin-bottom: 1rem;
+          margin-right: 5rem;
+          margin-left: 5rem;
+          width: 80%;
+          height: 4.5vh;
+        }
+      }
+    }
+    font-family: "Lobster";
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: "-50%";
+    transition: "2s";
+    background-color: rgb(58, 58, 58);
+    color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    animation-name: modalFade;
+    animation-duration: 0.6s;
+  }
 }

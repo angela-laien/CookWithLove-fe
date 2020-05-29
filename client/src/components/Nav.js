@@ -13,13 +13,13 @@ function Nav() {
               className='companylogo'
               alt='companylogo'
             />
-            <Link to='/register' style={{ textDecoration: 'none' }}>
+            <Link className='navText' to='/register' style={{ textDecoration: 'none' }}>
               <A>Sign Up</A>
             </Link>
-            <Link to='/login' style={{ textDecoration: 'none' }}>
+            <Link className='navText' to='/login' style={{ textDecoration: 'none' }}>
               <A>Login</A>
             </Link>
-            <Link to='/user_page' style={{ textDecoration: 'none' }}>
+            <Link className='navText' to='/user_page' style={{ textDecoration: 'none' }}>
               <A>My Recipes</A>
             </Link>
           </Navigation>
@@ -38,12 +38,15 @@ const Navigation = styled.nav`
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    background-color: #3cb371;
+    background-color: rgb(60,199,113);
     align-items: center;
 `;
 
 const A = styled.a`
     color: white;
+    &:hover {
+      color: rgb(0,100,0);
+    }
     font-weight: bold;
 `;
 
