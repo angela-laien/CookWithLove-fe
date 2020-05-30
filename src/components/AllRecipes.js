@@ -23,12 +23,21 @@ const AllRecipes = () => {
                     <div className='allRecipes' key={recipe.user_id}>
                         <h2 className="recipeTitle">{recipe.recipeName}</h2>
                         <Link to={`/recipes/${recipe.id}`}>
-                            <img 
+                            {recipe.imageURL ? (
+                                <img 
                                 className='recipeImg'
                                 src={recipe.imageURL}
                                 alt='recipe'
-                            />
+                                />
+                            ) : (
+                                <img 
+                                className='img'
+                                src='https://img.icons8.com/dusk/64/000000/no-camera.png'
+                                alt='not available'
+                                />
+                            )}
                         </Link>
+                        
                         <div className='combine'>
                             <h3>Prep Time:</h3><p className="details">{recipe.prepTime}</p>
                             <h3>Cook Time:</h3><p className="details">{recipe.cookTime}</p>
