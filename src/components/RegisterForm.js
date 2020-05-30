@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import { useToasts } from 'react-toast-notifications';
 import styled from 'styled-components';
 
-const companyLogo = require('../Instacook.png');
+// const companyLogo = require('../Instacook.png');
 
 const formOutline = yup.object().shape({
     username: yup
@@ -98,13 +98,14 @@ export default function Register(props) {
     return (
         <FormContainer>
             <Form onSubmit={submitForm}>
-                <Logo>
+                {/* <Logo>
                     <Img 
                         src={companyLogo}
                         className='companylogo'
                         alt='companylogo'
                     />
-                </Logo>
+                </Logo> */}
+                <H1>Create Account</H1>
                 <Input 
                     className='form'
                     id='username'
@@ -164,15 +165,25 @@ const Form = styled.form`
         }
 `;
 
-const Logo = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
+// const Logo = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+// `;
+
+// const Img = styled.img`
+//     width: 100px;
+// `;
+
+const H1 = styled.div`
+    font-family: "Fugaz One";
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(255,105,180);
+    margin: 0% 0% 5% 0%;
 `;
 
-const Img = styled.img`
-    width: 100px;
-`;
 
 const Input = styled.input`
     display: block;

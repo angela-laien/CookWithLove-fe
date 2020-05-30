@@ -29,11 +29,13 @@ const AllRecipes = () => {
                                 alt='recipe'
                             />
                         </Link>
-                        <p className="details">Prep Time: {recipe.prepTime}</p>
-                        <p className="details">Cook Time: {recipe.cookTime}</p>
-                        <p className="details">Yields: {recipe.yields}</p>
-                        <p className="details">Ingredients: {recipe.ingredients}</p>
-                        <p className="details">instructions: {recipe.instructions}</p>
+                        <div className='combine'>
+                            <h3>Prep Time:</h3><p className="details">{recipe.prepTime}</p>
+                            <h3>Cook Time:</h3><p className="details">{recipe.cookTime}</p>
+                            <h3>Yields:</h3><p className="details">{recipe.yields}</p>
+                        </div>
+                        <h3>Ingredients: </h3><p className="details">{recipe.ingredients}</p>
+                        <h3>Instructions: </h3><p className="details">{recipe.instructions}</p>
                     </div>
                 ))}
             </div>

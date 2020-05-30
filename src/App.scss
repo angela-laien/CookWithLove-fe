@@ -45,6 +45,22 @@
         color: white;
     }
 
+    h3 {
+      font-family: "Courgette";
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: black;
+    }
+
+    .combine {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding-left: 6%;
+    }
+    
+
     p {
         margin: 1% 8%;
         font-family: "Courgette";
@@ -100,7 +116,22 @@
       margin-top: 5%;
       margin-bottom: 1rem;
       color: rgb(34,139,34);
-  }
+    }
+
+    h3 {
+      font-family: "Courgette";
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: black;
+    }
+
+    .combo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding-left: 6%;
+    }
 
     p {
         margin: 1% 8%;
