@@ -32,8 +32,8 @@ const AllRecipes = () => {
                         <div className='combine'>
                             <h3>Prep Time:</h3><p className="details">{recipe.prepTime}</p>
                             <h3>Cook Time:</h3><p className="details">{recipe.cookTime}</p>
-                            <h3>Yields:</h3><p className="details">{recipe.yields}</p>
-                        </div>
+                            </div>
+                        <h3>Serving:</h3><p className="details">{recipe.yields}</p>
                         <h3>Ingredients: </h3><p className="details">{recipe.ingredients}</p>
                         <h3>Instructions: </h3><p className="details">{recipe.instructions}</p>
                     </div>
