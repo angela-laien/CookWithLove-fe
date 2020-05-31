@@ -1,7 +1,7 @@
 import axiosWithAuth from '../utils/axiosWithAuth';
 import React, { useState, useEffect } from 'react';
 import * as yup from 'yup';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useToasts } from "react-toast-notifications";
 import styled from "styled-components";
 
@@ -33,7 +33,7 @@ const formOutline = yup.object().shape({
 });
 
 export default function AddRecipe(props) {
-    // const { push } = useHistory();
+    const { push } = useHistory();
     const { addToast } = useToasts();
     
     const [formState, setFormState] = useState({
@@ -111,6 +111,9 @@ export default function AddRecipe(props) {
                     .then((res) => {
                         console.log('photo', res.data);
                     });
+                    push("/user_page");
+                    props.setToast(true);
+
             })
             .catch((err) => {
                 console.log(err.res);
