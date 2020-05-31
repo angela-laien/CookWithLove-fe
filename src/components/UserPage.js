@@ -12,7 +12,7 @@ const UserPage = (props) => {
     const initialRecipe = {
         user_id: currentUserId,
         recipeName: '',
-        imageURL: '',
+        // imageURL: '',
         prepTime: '',
         cookTime: '',
         yields: '',
