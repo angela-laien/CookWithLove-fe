@@ -7,7 +7,7 @@ const AllRecipes = () => {
 
     useEffect(() => {
         axios 
-            .get('https://love-cook-800.herokuapp.com/public')
+            .get('https://insta-cook.herokuapp.com/public')
             .then((res) => {
                 console.log(res.data);
                 setRecipes(res.data)
@@ -42,7 +42,7 @@ const AllRecipes = () => {
                             <h3>Prep Time:</h3><p className="details">{recipe.prepTime}</p>
                             <h3>Cook Time:</h3><p className="details">{recipe.cookTime}</p>
                             </div>
-                        <h3>Serving:</h3><p className="details">{recipe.yields}</p>
+                        <h3>Serving:</h3><p className="details">{recipe.serving}</p>
                         <h3>Ingredients: </h3><p className="details">{recipe.ingredients}</p>
                         <h3>Instructions: </h3><p className="details">{recipe.instructions}</p>
                     </div>

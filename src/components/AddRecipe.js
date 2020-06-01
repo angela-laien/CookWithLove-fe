@@ -18,7 +18,7 @@ const formOutline = yup.object().shape({
         .string()
         .required()
         .min(4, 'Recipe name should have at least 4 characters!'),
-    yields: yup
+    serving: yup
         .string()
         .required()
         .min(1, 'Recipe name should have at least 1 character!'),
@@ -41,7 +41,7 @@ export default function AddRecipe(props) {
         recipeName: '',
         prepTime: '',
         cookTime: '',
-        yields: '',
+        serving: '',
         ingredients: '',
         instructions: ''
     });
@@ -50,7 +50,7 @@ export default function AddRecipe(props) {
         recipeName: '',
         prepTime: '',
         cookTime: '',
-        yields: '',
+        serving: '',
         ingredients: '',
         instructions: ''
     });
@@ -102,7 +102,7 @@ export default function AddRecipe(props) {
                     recipeName: '',
                     prepTime: '',
                     cookTime: '',
-                    yields: '',
+                    serving: '',
                     ingredients: '',
                     instructions: ''
                 });
@@ -182,15 +182,15 @@ export default function AddRecipe(props) {
 
                 <Input 
                     className="form_input"
-                    id="yields"
+                    id="serving"
                     type="text"
-                    name="yields"
-                    placeholder="Yields"
-                    value={formState.yields}
+                    name="serving"
+                    placeholder="Serving"
+                    value={formState.serving}
                     onChange={inputChange}
                 />
-                {error.yields.length > 0 ? (
-                    <p className="error">{error.yields}</p>
+                {error.serving.length > 0 ? (
+                    <p className="error">{error.serving}</p>
                 ) : null}
 
                 <Input 

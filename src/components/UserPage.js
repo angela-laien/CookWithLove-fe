@@ -15,7 +15,7 @@ const UserPage = (props) => {
         // imageURL: '',
         prepTime: '',
         cookTime: '',
-        yields: '',
+        serving: '',
         ingredients: '',
         instructions: ''
     };
@@ -135,7 +135,7 @@ const UserPage = (props) => {
                                     <h3>Prep Time: </h3><p className='des'>{recipe.prepTime}</p>
                                     <h3>Cook Time: </h3><p className='des'>{recipe.cookTime}</p>
                                 </div>
-                                <h3>Serving: </h3><p className='des'>{recipe.yields}</p>
+                                <h3>Serving: </h3><p className='des'>{recipe.serving}</p>
                                 <h3>Ingredients: </h3><p className='des'>{recipe.ingredients}</p>
                                 <h3>Instructions: </h3><p className='des'>{recipe.instructions}</p>
 
@@ -204,11 +204,11 @@ const UserPage = (props) => {
                                         />
                                         <input 
                                             className='formInput'
-                                            id='yields'
+                                            id='serving'
                                             type='text'
-                                            name='yields'
-                                            placeholder={recipe.yields}
-                                            value={update.yields}
+                                            name='serving'
+                                            placeholder={recipe.serving}
+                                            value={update.serving}
                                             onChange={handleChange}
                                         />
                                         <input 
