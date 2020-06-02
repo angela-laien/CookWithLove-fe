@@ -211,7 +211,7 @@ const UserPage = (props) => {
                                             value={update.serving}
                                             onChange={handleChange}
                                         />
-                                        <input 
+                                        <textarea
                                             className='formInput'
                                             id='ingredients'
                                             type='text'
@@ -220,7 +220,7 @@ const UserPage = (props) => {
                                             value={update.ingredients}
                                             onChange={handleChange}
                                         />
-                                        <input 
+                                        <textarea
                                             className='formInput'
                                             id='instructions'
                                             type='text'
@@ -236,7 +236,7 @@ const UserPage = (props) => {
                                                 closeModal();
                                             }}
                                         >
-                                            Update Recipe
+                                            Save
                                         </button>
                                     </form>
                                 </div>

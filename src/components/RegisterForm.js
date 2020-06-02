@@ -190,6 +190,7 @@ const Input = styled.input`
     box-sizing: border-box;
     width: 200px;
     outline: none;
+    padding: 1%;
     margin: 0rem 0rem 1rem 0rem;
 `;
 

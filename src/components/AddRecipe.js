@@ -193,7 +193,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.serving}</p>
                 ) : null}
 
-                <Input 
+                <TextArea 
                     className="form_input"
                     id="ingredients"
                     type="text"
@@ -206,7 +206,7 @@ export default function AddRecipe(props) {
                     <p className="error">{error.ingredients}</p>
                 ) : null}
 
-                <Input 
+                <TextArea
                     className="form_input"
                     id="instructions"
                     type="text"
@@ -253,7 +253,6 @@ const Form = styled.form`
  const H3 = styled.h3`
     font-family: "Fugaz One";
     margin: 0 0 50px 0;
-    padding: 10px;
     text-align: center;
     font-size: 30px;
     color: rgb(0,100,0);
@@ -261,13 +260,26 @@ const Form = styled.form`
 
  const Input = styled.input`
     display: block;
+    border-radius: 3px;
     box-sizing: border-box;
+    border: none;
     width: 100%;
     outline: none;
-    margin: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1.5%;
  `;
 
+ const TextArea = styled.textarea`
+    display: block;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    outline: none;
+    margin-bottom: 1rem;
+    height: 20vh;
+    padding: 1.5%;
+`
  const Button = styled.button`
     width: 45%;
     border-radius: 7px;

@@ -33,7 +33,6 @@
       width: 80%;
       margin-bottom: 1%;
       max-width: 50rem; 
-      // box-shadow: 13px 10px 33px -20px rgba(0, 0, 0, 0.75);
     }
 
     h2 {
@@ -85,7 +84,7 @@
     text-align: center;
     font-size: 3rem;
     font-weight: 500;
-    color: rgb(255,105,180);
+    color: deeppink;
     padding: 0% 5%;
     margin: -0.5% 0% -2.5% 0%;
   }
@@ -95,7 +94,7 @@
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
-    color: rgb(220,20,60);
+    color: rgb(255,105,180);
     padding: 0% 5%;
     margin: 4% 0% -2.5% 0%;
   }
@@ -106,7 +105,6 @@
       width: 80%;
       margin-bottom: 1%;
       max-width: 50rem; 
-      // box-shadow: 13px 10px 33px -20px rgba(0, 0, 0, 0.75);
     }
 
     h2 {
@@ -122,7 +120,7 @@
       font-family: "Courgette";
       font-weight: 800;
       font-size: 1.1rem;
-      color: rgb(220,20,60);
+      color: deeppink;
     }
 
     .combo {
@@ -152,12 +150,12 @@
       a {
         text-decoration: none;
         color: white;
-        background:rgb(255,105,180);
+        background: lightpink;
         padding: 0.3rem 1.5rem;
         border-radius: 8px;
         cursor: pointer;
         &:hover {
-          background: rgb(255,20,147);
+          background: hotpink;
           color: white;
         }
       }
@@ -210,13 +208,18 @@
           margin-left: 1.5rem;
           font-weight: 700;
         }
-        .text-area {
+        textarea {
+          border-radius: 3px;
+          border: none;
+          margin-bottom: 1rem;
+          margin-right: 5rem;
+          margin-left: 5rem;
           width: 80%;
-          margin-bottom: 2rem;
-          border-radius: 2px;
+          height: 20vh;
+          padding: 2%;
         }
         .button {
-          width: 35%;
+          width: 25%;
           height: 1.8rem;
           font-size: 0.8rem;
           color: white;
@@ -230,6 +233,7 @@
         }
         input {
           border-radius: 3px;
+          border: none;
           margin-bottom: 1rem;
           margin-right: 5rem;
           margin-left: 5rem;
@@ -253,3 +257,4 @@
     animation-duration: 0.6s;
   }
 }
+
