@@ -243,7 +243,7 @@ const Form = styled.form`
     flex-direction: column;
     align-items: center;
     background: rgb(152,231,152);
-    padding: 4em 4em 6em;
+    padding: 0% 10%;
     max-width: 400px;
     margin: 10vh auto;
     box-shadow: 5px 8px 32px 10px rgba(150, 148, 150, 1);
@@ -252,9 +252,9 @@ const Form = styled.form`
 
  const H3 = styled.h3`
     font-family: "Fugaz One";
-    margin: 0 0 50px 0;
+    margin: 10% 0%;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(0,100,0);
  `;
 
@@ -286,7 +286,7 @@ const Form = styled.form`
     font-family: "Lobster";
     font-size: 1rem;
     font-weight: 800;
-    margin-top: 30px;
+    margin: 20px 0px 45px 0px;
     padding: 0.8em 0.5em;
     background: rgb(34,139,34);
     color: white;
