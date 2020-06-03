@@ -131,6 +131,7 @@ const UserPage = (props) => {
                                         />
                                     )}
                                 </Link>
+                
                                 <div className='combo'>
                                     <h3>Prep Time: </h3><p className='des'>{recipe.prepTime}</p>
                                     <h3>Cook Time: </h3><p className='des'>{recipe.cookTime}</p>
@@ -138,7 +139,7 @@ const UserPage = (props) => {
                                 <h3>Serving: </h3><p className='des'>{recipe.serving}</p>
                                 <h3>Ingredients: </h3><p className='des'>{recipe.ingredients}</p>
                                 <h3>Instructions: </h3><p className='des'>{recipe.instructions}</p>
-
+                                
                                 <div className='buttonContainer'>
                                     <div
                                         className='edit'
