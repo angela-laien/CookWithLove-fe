@@ -12,20 +12,18 @@ function UserNav() {
     return (
         <UserNavContainer>
             <Navigation>
-                <Link to='/'>
                     <Img 
                         src={companyLogo}
                         className='companylogo'
                         alt='companylogo'
                     />
-                </Link>
                 <Link className='navText' to='/add_recipe' style={{ textDecoration: 'none' }}>
                     <A>Add Recipe</A>
                 </Link>
-                <Link className='navText' to='/user_page' style={{ textDecoration: 'none' }}>
-                    <A>My Recipes</A>
+                <Link className='navText' to='/' style={{ textDecoration: 'none' }}>
+                    <A>Home</A>
                 </Link>
-                <Link className='navText' onClick={logout} to='/' style={{ textDecoration: 'none' }}>
+                <Link className='navText' onClick={logout} to='/login' style={{ textDecoration: 'none' }}>
                     <A>Logout</A>
                 </Link>
             </Navigation>
@@ -58,7 +56,7 @@ const A = styled.a`
 
 const Img = styled.img`
     width: 90px;
-    padding: 10% 0%;
+    padding: 10px 0px;
 `;
 
 export default UserNav;
