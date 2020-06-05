@@ -5,8 +5,6 @@ import * as yup from 'yup';
 import styled from "styled-components";
 import { useToasts } from "react-toast-notifications";
 
-// const companyLogo = require('../Instacook.png');
-
 const formOutline = yup.object().shape({
     username: yup.string().required('* please enter username'),
     password: yup.string().required('* please enter password')
@@ -105,13 +103,6 @@ export default function LoginForm(props) {
     return (
         <FormContainer>
             <Form onSubmit={formSubmit}>
-                {/* <Logo>
-                    <Img 
-                        src={companyLogo}
-                        className='companylogo'
-                        alt='companylogo'
-                    />
-                </Logo> */}
                 <H1>Welcome Back</H1>
                 <Input 
                     className='form'
@@ -169,16 +160,6 @@ const Form = styled.form`
             }
         }
 `;
-
-// const Logo = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     width: 100%;
-// `;
-
-// const Img = styled.img`
-//     width: 100px;
-// `;
 
 const H1 = styled.div`
     font-family: "Fugaz One";

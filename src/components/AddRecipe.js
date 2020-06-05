@@ -246,7 +246,7 @@ const Form = styled.form`
     padding: 0% 10%;
     max-width: 400px;
     margin: 10vh auto;
-    box-shadow: 5px 8px 32px 10px rgba(150, 148, 150, 1);
+    box-shadow: 5px 8px 32px 10px pink;
     border-radius: 10px;
 `;
 
@@ -254,7 +254,8 @@ const Form = styled.form`
     font-family: "Fugaz One";
     margin: 10% 0%;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 500;
     color: rgb(0,100,0);
  `;
 
@@ -285,7 +286,7 @@ const Form = styled.form`
     border-radius: 7px;
     font-family: "Lobster";
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 500;
     margin: 20px 0px 45px 0px;
     padding: 0.8em 0.5em;
     background: rgb(34,139,34);

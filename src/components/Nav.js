@@ -38,14 +38,14 @@ const Navigation = styled.nav`
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(60,199,113);
+    background-color: rgb(255,135,180);
     align-items: center;
 `;
 
 const A = styled.a`
     color: white;
     &:hover {
-      color: rgb(0,100,0);
+      color: rgb(255,20,147);
     }
     font-weight: bold;
 `;

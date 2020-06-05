@@ -12,14 +12,14 @@
 .all-container {
 
   text-align: center;
-  background-color: rgb(255,170,200);
+  background-color: white;
   padding: 2rem 0rem;
 
   .all-title {
     font-family: "Fugaz One";
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 300;
     color: rgb(255,20,147);
     padding: 0% 5%;
     margin: -0.2% 0% -3.2% 0%;
@@ -37,17 +37,17 @@
 
     h2 {
         font-family: "Lobster";
-        font-weight: 600;
-        font-size: 2.5rem;
+        font-weight: 500;
+        font-size: 2rem;
         margin-top: 5%;
         margin-bottom: 1rem;
-        color: white;
+        color: rgb(34,139,34);
     }
 
     h3 {
       font-family: "Courgette";
-      font-weight: 800;
-      font-size: 1.1rem;
+      font-weight: 500;
+      font-size: 1rem;
       color: rgb(255,20,147);
     }
 
@@ -63,9 +63,9 @@
     p {
         margin: 1% 8%;
         font-family: "Courgette";
-        font-weight: 800;
-        font-size: 1.1rem;
-        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+        color: black;
         overflow-wrap: break-word;
     }
 
@@ -83,7 +83,7 @@
   .user-title {
     font-family: "Fugaz One";
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: deeppink;
     padding: 0% 5%;
@@ -93,7 +93,7 @@
   .note {
     font-family: "Lobster";
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
     color: rgb(255,105,180);
     padding: 0% 5%;
@@ -110,8 +110,8 @@
 
     h2 {
       font-family: "Lobster";
-      font-weight: 600;
-      font-size: 2.5rem;
+      font-weight: 500;
+      font-size: 2rem;
       margin-top: 5%;
       margin-bottom: 1rem;
       color: rgb(34,139,34);
@@ -123,8 +123,8 @@
 
     h3 {
       font-family: "Courgette";
-      font-weight: 800;
-      font-size: 1.1rem;
+      font-weight: 500;
+      font-size: 1rem;
       color: deeppink;
     }
 
@@ -139,9 +139,9 @@
     p {
         margin: 1% 8%;
         font-family: "Courgette";
-        font-weight: 800;
-        font-size: 1.1rem;
-        color: rgb(34,139,34);
+        font-weight: 500;
+        font-size: 1rem;
+        color: black;
         overflow-wrap: break-word;
     }
 

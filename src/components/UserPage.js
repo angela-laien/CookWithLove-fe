@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import axiosWithAuth from '../utils/axiosWithAuth';
 import Modal from "react-modal";
 import { useToasts } from "react-toast-notifications";
-// import SyncLoader from "react-spinners/SyncLoader";
 
 const UserPage = (props) => {
     const { addToast } = useToasts();
@@ -12,7 +11,6 @@ const UserPage = (props) => {
     const initialRecipe = {
         user_id: currentUserId,
         recipeName: '',
-        // imageURL: '',
         prepTime: '',
         cookTime: '',
         serving: '',
