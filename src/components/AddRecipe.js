@@ -13,23 +13,23 @@ const formOutline = yup.object().shape({
     prepTime: yup
         .string()
         .required()
-        .min(4, 'Recipe name should have at least 4 characters!'),
+        .min(4, 'Prep time should have at least 4 characters!'),
     cookTime: yup
         .string()
         .required()
-        .min(4, 'Recipe name should have at least 4 characters!'),
+        .min(4, 'Cook time should have at least 4 characters!'),
     serving: yup
         .string()
         .required()
-        .min(1, 'Recipe name should have at least 1 character!'),
+        .min(1, 'Serving should have at least 1 character!'),
     ingredients: yup
         .string()
         .required()
-        .min(3, 'Recipe name should have at least 3 characters!'),
+        .min(3, 'Ingredients should have at least 3 characters!'),
     instructions: yup
         .string()
         .required()
-        .min(3, 'Recipe name should have at least 3 characters!'),
+        .min(3, 'Instructions should have at least 3 characters!'),
 });
 
 export default function AddRecipe(props) {
