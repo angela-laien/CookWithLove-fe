@@ -146,14 +146,14 @@ const UserPage = (props) => {
                                             openModal(recipe.recipeName)
                                         }}
                                     >
-                                        <a className='btnText'>Edit</a>
+                                        <a className='btnEdit'>Edit</a>
                                     </div>
                                     
                                     <div
                                         className='delete'
                                         onClick={(e) => deleteRecipe(e, recipe.id)}
                                     >
-                                        <a className='btnText'>Delete</a>
+                                        <a className='btnDel'>Delete</a>
                                     </div>
                                 </div>
                             </div>

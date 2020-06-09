@@ -153,10 +153,26 @@
       margin: 2rem 0rem;
       width: 100%;
 
-      a {
+      .btnEdit {
+        font-family: "Courgette";
+        font-size: 0.8rem;
         text-decoration: none;
-        color: white;
-        background: lightpink;
+        color: black;
+        background: rgb(152,231,152);
+        padding: 0.3rem 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+          background: rgb(34,139,34);
+          color: white;
+        }
+      }
+      .btnDel {
+        font-family: "Courgette";
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: black;
+        background: pink;
         padding: 0.3rem 1.5rem;
         border-radius: 8px;
         cursor: pointer;
