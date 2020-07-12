@@ -30,6 +30,8 @@ function Nav() {
 const PublicNav = styled.div`
     display: flex;
     width: 100%;
+    position: fixed;
+    top: 0;
 `;
 
 const Navigation = styled.nav`

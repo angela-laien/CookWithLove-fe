@@ -236,6 +236,7 @@ export default function AddRecipe(props) {
 const Add = styled.div`
     width: 80%;
     margin: 0 auto;
+    padding-top: 80px;
 `;
 
 const Form = styled.form`

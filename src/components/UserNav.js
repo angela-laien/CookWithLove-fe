@@ -34,6 +34,8 @@ function UserNav() {
 const UserNavContainer = styled.div`
     display: flex;
     width: 100%;
+    position: fixed;
+    top: 0;
 `;
 
 const Navigation = styled.nav`

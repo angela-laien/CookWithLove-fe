@@ -143,6 +143,7 @@ export default function Register(props) {
 const FormContainer = styled.div`
     width: 75%;
     margin: 0 auto;
+    padding-top: 100px;
 `;
 
 const Form = styled.form`
